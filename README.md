@@ -46,4 +46,5 @@ However, we can infer that, although the classification task with two independen
 
 ## Future Considerations:
 A final consideration to be made here is that additional inputs to the model would be beneficial, particularly by aggregating data related to the shipment contracts and specifications with the supplier for each order. We believe that this would aid the models in interpreting the impacts of the actual shipping to delivery times. We hypothesize that orders with low discount and “problematic” weight ranges translate to particular shipping contract specifications that reflect a lower priority by the shipment providers. Therefore, including this sort of data would further help improve the results. 
+
 Nevertheless, we believe that our current findings already suffice to address the presented problem. The models used correctly address the matter of identifying potential delays, specially when considering the patterns in our confusion matrix and classification report. Since the model tends to rarely miss the indication of actual delays, most problematic shippings will be successfully flagged to the management.
