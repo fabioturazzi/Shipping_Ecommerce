@@ -1,7 +1,7 @@
 # Ecommerce Shopping Analysis
 
 ## Project Overview
-This project aims to study the shipping status from an e-commerce company, aiming to identify and understand late deliveries to improve customers' experiences. The dataset is obtained from [Kaggle](https://www.kaggle.com/prachi13/customer-analytics), and the analysis is uploaded to [Google Colab](https://colab.research.google.com/drive/1hDEyXAiuXt_i9HjGRUrbZea3SSEiO4mk?authuser=1#scrollTo=rC5cFzL69ZxK)
+This project aims to study the shipping status from an e-commerce company, aiming to identify and understand late deliveries to improve customer experience. The dataset is obtained from [Kaggle](https://www.kaggle.com/prachi13/customer-analytics), and the analysis notebook is uploaded to [Google Colab](https://colab.research.google.com/drive/1hDEyXAiuXt_i9HjGRUrbZea3SSEiO4mk?authuser=1#scrollTo=rC5cFzL69ZxK)
 
 ## Main Method:
 - Data Wrangling with pandas
@@ -40,9 +40,10 @@ Reached.on.Time_Y.N | Whether the shipment arrived as scheduled (0,1) |   int64
 ```
 
 ## Challenges
-As we carried out our feature selecion step, it was apperent that only 2 variables: ```Discount_offered``` and ```Weight_in_gms``` seem to have determining impact on shipment's status. Due to the lack of additional domain knowledge, it is challenging to explain the reasons behind this concisely.
+As we carried out our feature selecion step, it was apperent that only 2 variables: ```Discount_offered``` and ```Weight_in_gms``` seem to have determining impact on shipment's status. Due to the lack of additional domain knowledge, it is challenging to explain the reasons behind this issue.
 
-However, we can infer that, although the classification task with two independent variables is simpler, it still presents a probabilistic problem that benefits from using Machine Learning. While the simple thresholds of these two variables can be used to flag any potentially delayed order, the fact that we are providing an accurate model that can analyze each case by their specific value and render probabilistic outputs makes this process more efficient and precise.
+However, we can infer that, although the classification task with two independent variables is simpler, it still presents a probabilistic problem that benefits from using Machine Learning. While the simple thresholds of these two variables can be used to flag any potentially delayed order, the fact that we are providing an accurate model that can analyze each case by their specific value and render probabilistic outputs makes this process more efficient and precise. Moreover, our report explores the instrinsic relationship between these variables and other features, presenting the argument that they also carry implicit information regarding Product_importance. 
 
 ## Future Considerations:
-A final consideration to be made here is that additional inputs to the model would be beneficial, particularly by aggregating data related to the shipment contracts and specifications with the supplier for each order. We believe that this would aid the models in the interpretation of why those features ultimately impact delivery. We hypothesize that orders with low discount and “problematic” weight ranges translate to particular shipping contract specifications that reflect a lower priority by the shipment providers. Therefore, including this sort of data would further help improve the results. Lastly, we believe the variety
+A final consideration to be made here is that additional inputs to the model would be beneficial, particularly by aggregating data related to the shipment contracts and specifications with the supplier for each order. We believe that this would aid the models in interpreting the impacts of the actual shipping to delivery times. We hypothesize that orders with low discount and “problematic” weight ranges translate to particular shipping contract specifications that reflect a lower priority by the shipment providers. Therefore, including this sort of data would further help improve the results. 
+Nevertheless, we believe that our current findings already suffice to address the presented problem. The models used correctly address the matter of identifying potential delays, specially when considering the patterns in our confusion matrix and classification report. Since the model tends to rarely miss the indication of actual delays, most problematic shippings will be successfully flagged to the management.
