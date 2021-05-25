@@ -40,7 +40,7 @@ Reached.on.Time_Y.N | Whether the shipment arrived as scheduled (0,1) |   int64
 ```
 
 ## Challenges
-As we carried out our feature selecion step, it was apperent that only 2 variables: ```Discount_offered``` and ```Weight_in_gms``` seem to have determining impact on shipment's status. Due to the lack of additional domain knowledge, it is challenging to explain the reasons behind this issue.
+As we carried out our feature selection step, it was apparent that only 2 variables: ```Discount_offered``` and ```Weight_in_gms``` seem to have determining impact on shipment's status. Due to the lack of additional domain knowledge, it is challenging to explain the reasons behind this issue.
 
 However, we can infer that, although the classification task with two independent variables is simpler, it still presents a probabilistic problem that benefits from using Machine Learning. While the simple thresholds of these two variables can be used to flag any potentially delayed order, the fact that we are providing an accurate model that can analyze each case by their specific value and render probabilistic outputs makes this process more efficient and precise. Moreover, our report explores the instrinsic relationship between these variables and other features, presenting the argument that they also carry implicit information regarding Product_importance. 
 
